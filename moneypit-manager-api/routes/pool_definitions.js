@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+pool_definitions = require('./pool_definitions.json');
+
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.json(pool_definitions);
 });
 
 module.exports = router;
